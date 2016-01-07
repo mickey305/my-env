@@ -13,6 +13,7 @@ formulas:
   - zsh-completions
   - coreutils
   # utils
+  - rcm
   - wget
   - openssl
   - jq
