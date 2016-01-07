@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HOMEBREW_CMD=/usr/local/bin/brew
+HOMEBREW_CMD=`which brew`
 CURRENT_PATH=`cd $(dirname $0); pwd`
 YAML_DATA_PATH=$CURRENT_PATH/brewlist.yml
 
