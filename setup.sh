@@ -1,11 +1,11 @@
 #!/bin/sh
 
 CURRENT_PATH=`cd $(dirname $0); pwd`
-GITHUB_SSH=git@github.com:mickey305
+GIT_REMOTE=git@github.com:mickey305
 
 cd $HOME
-git clone $GITHUB_SSH/dotfiles-local.git
-git clone $GITHUB_SSH/dotfiles.git
+git clone $GIT_REMOTE/dotfiles-local.git
+git clone $GIT_REMOTE/dotfiles.git
 cd $CURRENT_PATH
 
 chmod 700 $HOME/dotfiles
@@ -20,8 +20,9 @@ env RCRC=$HOME/dotfiles/rcrc rcup
 $CURRENT_PATH/brewfile.sh
 
 # ruby relations
-rbenv install 2.2.3
-rbenv global 2.2.3
+R_VERSION=2.2.3
+rbenv install $R_VERSION
+rbenv global $R_VERSION
 
 gem update
 gem install bundler
