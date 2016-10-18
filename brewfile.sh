@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BREW=`which brew`
+BREW=brew
 
 ##### HOMEBREW SETUP TASK #####
 $BREW update
@@ -38,8 +38,10 @@ $BREW install git-flow
 $BREW install nmap
 $BREW install p7zip
 $BREW install pkg-config
-# sdk relations
+# android relations
 $BREW install android-sdk
+$BREW install android-ndk
+$BREW install ant
 # development component
 $BREW install pyenv-virtualenv
 $BREW install plenv
