@@ -1,94 +1,94 @@
 #!/bin/sh
 
-CMD=`which brew`
+BREW=`which brew`
 
 ##### HOMEBREW SETUP TASK #####
-$CMD update
-$CMD upgrade
+$BREW update
+$BREW upgrade
 
 ### repository ###
-$CMD tap homebrew/science || true
-$CMD tap homebrew/dupes || true
-$CMD tap homebrew/apache || true
-$CMD tap caskroom/cask || true
-$CMD tap caskroom/versions || true
-$CMD tap josegonzalez/homebrew-php || true
+$BREW tap homebrew/science || true
+$BREW tap homebrew/dupes || true
+$BREW tap homebrew/apache || true
+$BREW tap caskroom/cask || true
+$BREW tap caskroom/versions || true
+$BREW tap josegonzalez/homebrew-php || true
 # require rcm tools
-$CMD tap thoughtbot/formulae || true
+$BREW tap thoughtbot/formulae || true
 
 ### formula ###
 # zsh commands
-$CMD install zsh
-$CMD install zsh-completions
-$CMD install coreutils
+$BREW install zsh
+$BREW install zsh-completions
+$BREW install coreutils
 # utils
-$CMD install rcm
-$CMD install wget
-$CMD install openssl
-$CMD install jq
-$CMD install mercurial
-$CMD install rename
-$CMD install freetype
-$CMD install peco
-$CMD install graphviz
-$CMD install trash
-$CMD install gist
-$CMD install git
-$CMD install git-flow
-$CMD install nmap
-$CMD install p7zip
-$CMD install pkg-config
+$BREW install rcm
+$BREW install wget
+$BREW install openssl
+$BREW install jq
+$BREW install mercurial
+$BREW install rename
+$BREW install freetype
+$BREW install peco
+$BREW install graphviz
+$BREW install trash
+$BREW install gist
+$BREW install git
+$BREW install git-flow
+$BREW install nmap
+$BREW install p7zip
+$BREW install pkg-config
 # sdk relations
-$CMD install android-sdk
+$BREW install android-sdk
 # development component
-$CMD install pyenv-virtualenv
-$CMD install plenv
-$CMD install perl-build
-$CMD install rbenv
-$CMD install ruby-build
-$CMD install readline
-$CMD install phpenv
-$CMD installv php-build
-$CMD install nodebrew
-$CMD install gcc
-$CMD install go
-$CMD install scala
-$CMD install redis
-$CMD install httpd24
-$CMD install nginx
+$BREW install pyenv-virtualenv
+$BREW install plenv
+$BREW install perl-build
+$BREW install rbenv
+$BREW install ruby-build
+$BREW install readline
+$BREW install phpenv
+$BREW install php-build
+$BREW install nodebrew
+$BREW install gcc
+$BREW install go
+$BREW install scala
+$BREW install redis
+$BREW install httpd24
+$BREW install nginx
 # databases
-$CMD install sqlite
-$CMD install mysql
-$CMD install mongodb
+$BREW install sqlite
+$BREW install mysql
+$BREW install mongodb
 # others
-$CMD install xz
-$CMD install tig
-$CMD install libpng
-$CMD install gdbm
-$CMD install oniguruma
-$CMD install pcre
+$BREW install xz
+$BREW install tig
+$BREW install libpng
+$BREW install gdbm
+$BREW install oniguruma
+$BREW install pcre
 
 ### cask ###
-$CMD cask install appcleaner
-$CMD cask install iterm2
-$CMD cask install dropbox
-$CMD cask install skype
-$CMD cask install vagrant
-$CMD cask install virtualbox
-$CMD cask install heroku-toolbelt
+$BREW cask install appcleaner
+$BREW cask install iterm2
+$BREW cask install dropbox
+$BREW cask install skype
+$BREW cask install vagrant
+$BREW cask install virtualbox
+$BREW cask install heroku-toolbelt
 # web browser
-$CMD cask install google-chrome
-$CMD cask install firefox
+$BREW cask install google-chrome
+$BREW cask install firefox
 # development tools
-$CMD cask install sublime-text3
-$CMD cask install atom
-$CMD cask install android-studio
-$CMD cask install eclipse-ide
-$CMD cask install java
-$CMD cask install java7
-$CMD cask install dockertoolbox
-$CMD cask install coteditor
+$BREW cask install sublime-text3
+$BREW cask install atom
+$BREW cask install android-studio
+$BREW cask install eclipse-ide
+$BREW cask install java
+$BREW cask install java7
+$BREW cask install dockertoolbox
+$BREW cask install coteditor
 
-$CMD cask cleanup
-$CMD cleanup
-$CMD linkapps
+$BREW cask cleanup
+$BREW cleanup
+$BREW linkapps

@@ -28,5 +28,8 @@ gem update
 gem install bundler
 gem install rails --version="4.2.5"
 
+# shell recall
+unset PATH; exec $SHELL -l
+
 # cancel execute flag of this file
 chmod -x $CURRENT_PATH/`basename $0`
