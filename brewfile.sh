@@ -58,6 +58,7 @@ $BREW install scala
 $BREW install redis
 $BREW install httpd24
 $BREW install nginx
+$BREW install clisp
 # databases
 $BREW install sqlite
 $BREW install mysql
