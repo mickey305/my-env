@@ -38,6 +38,7 @@ $BREW install git-flow
 $BREW install nmap
 $BREW install p7zip
 $BREW install pkg-config
+$BREW install cpulimit
 # android relations
 $BREW install android-sdk
 $BREW install android-ndk
