@@ -1,12 +1,16 @@
 #!/bin/sh
 
+TAG204231="setup.sh"
+
 CURRENT_PATH=`cd $(dirname $0); pwd`
+export LOGFILE="$HOME/$(date '+%Y%m%d[%T]')setup.log"
 GIT_HOST=github.com
 GIT_HOST_USER=git
 GIT_USER=mickey305
-
 GIT_SSH_REMOTE=$GIT_HOST_USER@$GIT_HOST:$GIT_USER
 GIT_HTTP_REMOTE=$GIT_HOST/$GIT_USER
+
+source $CURRENT_PATH/functions.sh
 
 cd $HOME
 git clone $GIT_SSH_REMOTE/dotfiles-local.git
@@ -24,7 +28,7 @@ env RCRC=$HOME/dotfiles/rcrc rcup
 # homebrew install
 $CURRENT_PATH/brewfile.sh
 
-reload
+reload-env
 #-------------------------------------------------------------------------------
 
 # ruby relations
@@ -44,13 +48,7 @@ mkdir $HOME/workspace/golang
 go install $GIT_HTTP_REMOTE/jdkenv
 jdkenv init
 
-reload
+reload-env
 #-------------------------------------------------------------------------------
 
-# cancel execute flag of this file
-chmod -x $CURRENT_PATH/`basename $0`
-
-# local env file reload
-reload() {
-  source $HOME/.zshrc.local
-}
+unset LOGFILE
