@@ -1,6 +1,6 @@
 # my env
 ## Note
-### Mac OS X
+### macOS(OS X)
 ```
 # homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -12,7 +12,12 @@ brew install git; cd ~; git clone git@github.com:mickey305/my-env.git
 brew install zsh; sudo sh -c "echo 'usr/local/bin/zsh' >> /etc/shells"; chsh -s $(which zsh)
 
 # execute shellscript
-cd ~/my-env; ./setup.sh
+cd ~/my-env; chmod +x setup.sh; ./setup.sh; chmod -x setup.sh; mv -f setup.sh .setup.sh
+## all setup log
+#LOGFILE_ALL="~/setup_all.log"
+#cd ~/my-env; chmod +x setup.sh; echo "$(./setup.sh)" | tee >(cat 1>>$LOGFILE_ALL 2>&1) | cat; chmod -x setup.sh; mv -f setup.sh .setup.sh
+## logfile env unset
+#unset LOGFILE_ALL
 ```
 
 ### Linux
@@ -41,7 +46,12 @@ brew install git; cd~; git clone git@github.com:mickey305/my-env.git
 brew install zsh; sudo sh -c `echo "$HOME/.linuxbrew/bin/zsh" >> /etc/shells`; chsh -s $(which zsh)
 
 # execute shellscript
-cd ~/my-env; ./setup.sh
+cd ~/my-env; chmod +x setup.sh; ./setup.sh; chmod -x setup.sh; mv -f setup.sh .setup.sh
+## all setup log
+#LOGFILE_ALL="~/setup_all.log"
+#cd ~/my-env; chmod +x setup.sh; echo "$(./setup.sh)" | tee >(cat 1>>$LOGFILE_ALL 2>&1) | cat; chmod -x setup.sh; mv -f setup.sh .setup.sh
+## logfile env unset
+#unset LOGFILE_ALL
 ```
 
 ## Links
