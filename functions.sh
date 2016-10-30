@@ -7,7 +7,7 @@ function log() {
 		local tag=$1
 		local msg=$2
 		local outfile=$LOGFILE
-		echo "$(date '+%Y-%m-%d %T') - [$1] \"$msg\"" | tee >(cat 1>>$outfile 2>&1) | cat
+		echo "$(date '+%Y-%m-%d %T') - [$tag] \"$msg\"" | tee >(cat 1>>$outfile 2>&1) | cat
 	fi
 }
 
