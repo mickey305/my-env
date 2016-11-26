@@ -1,6 +1,10 @@
 # my env
 ## Note
 ### macOS(OS X)
+---
+#### 1. Initialization
+none desc.
+#### 2. Setup command
 ```shell
 # homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -20,21 +24,31 @@ cd ~/my-env; chmod +x setup.sh; ./setup.sh; chmod -x setup.sh; mv -f setup.sh .s
 #unset LOGFILE_ALL
 ```
 
+#### 3. Copy local command
+```shell
+ORGN_BIN_PATH=/copy/target/bin/path;
+if [ -d "$ORGN_BIN_PATH" ]; then
+  cp $ORGN_BIN_PATH/keyenv $HOME/.bin.local/.darwin/
+fi
+```
+
 ### Linux
-#### Debian系(Debian, Ubuntu etc.)
+---
+#### 1. Initialization
+* Debian系(Debian, Ubuntu etc.)
 ```shell
 sudo apt-get install gettext
 sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
 ```
 
-#### RHEL系(CentOS, Red Hat, Fedora etc.)
+* RHEL系(CentOS, Red Hat, Fedora etc.)
 ```shell
 sudo yum install openssl-devel
 sudo yum groupinstall 'Development Tools' && sudo yum install curl git irb m4 ruby texinfo bzip2-devel curl-devel expat-devel ncurses-devel zlib-devel
 ```
-* [CentOS6 gcc symlink info URL][centos6_gcc]
+  * [CentOS6 gcc symlink info URL][centos6_gcc]
 
-#### Setup command
+#### 2. Setup command
 ```shell
 # linuxbrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
