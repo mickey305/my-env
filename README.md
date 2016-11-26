@@ -45,7 +45,7 @@ sudo yum install openssl-devel
 sudo yum groupinstall 'Development Tools' && sudo yum install curl git irb m4 ruby texinfo bzip2-devel curl-devel expat-devel ncurses-devel zlib-devel
 ```
 
-    * [CentOS6 gcc symlink info URL][centos6_gcc]
+  * [CentOS6 gcc symlink info URL][centos6_gcc]
 
 #### 2. Setup command
 ```shell
