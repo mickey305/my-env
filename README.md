@@ -25,7 +25,7 @@ cd ~/my-env; chmod +x setup.sh; ./setup.sh; chmod -x setup.sh; mv -f setup.sh .s
 
 #### 3. Copy local command
 ```shell
-ORGN_BIN_PATH=/copy/target/bin/path;
+ORGN_BIN_PATH=/copy/target/bin/path
 if [ -d "$ORGN_BIN_PATH" ]; then
   cp $ORGN_BIN_PATH/keyenv $HOME/.bin.local/.darwin/
 fi
@@ -45,7 +45,7 @@ sudo yum install openssl-devel
 sudo yum groupinstall 'Development Tools' && sudo yum install curl git irb m4 ruby texinfo bzip2-devel curl-devel expat-devel ncurses-devel zlib-devel
 ```
 
-  * [CentOS6 gcc symlink info URL][centos6_gcc]
+  - [CentOS6 gcc symlink info URL][centos6_gcc]
 
 #### 2. Setup command
 ```shell
