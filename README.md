@@ -1,7 +1,6 @@
 # my env
 ## Note
-### macOS(OS X)
----
+### ===== macOS(OS X) ===============
 #### 1. Initialization
 none desc.
 #### 2. Setup command
@@ -32,8 +31,7 @@ if [ -d "$ORGN_BIN_PATH" ]; then
 fi
 ```
 
-### Linux
----
+### ===== Linux ===============
 #### 1. Initialization
 * Debian系(Debian, Ubuntu etc.)
 ```shell
